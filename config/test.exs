@@ -9,11 +9,14 @@ config :blog_phoenix, BlogPhoenix.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+# password hashing lib using bycrypt
+config :comeonin, bcrypt_log_rounds: 4
+
 # Configure your database
 config :blog_phoenix, BlogPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "devuser",
+  password: "devuser",
   database: "blog_phoenix_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

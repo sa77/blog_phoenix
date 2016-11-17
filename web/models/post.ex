@@ -6,7 +6,7 @@ defmodule BlogPhoenix.Post do
     field :body, :string
 
     # associations
-    has_many :comments, BlogPhoenix.Comment
+    has_many :comments, BlogPhoenix.Comment, on_delete: :delete_all
 
     timestamps()
   end

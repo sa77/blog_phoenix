@@ -1,4 +1,7 @@
 <h2>Listing posts</h2>
+
+<%= link "New post", to: post_path(@conn, :new), class: "btn btn-primary btn-xs" %>
+
 <table class="table">
   <thead>
     <tr>
@@ -23,3 +26,4 @@
 <% end %>
   </tbody>
 </table>
+
