@@ -1,5 +1,7 @@
 <h2>Show post</h2>
 
+<%= link "Back", to: post_path(@conn, :index), class: "btn btn-info btn-xs" %>
+
 <ul>
 
   <li>
@@ -14,8 +16,7 @@
 
 </ul>
 
-<%= link "Edit", to: post_path(@conn, :edit, @post) %>
-<%= link "Back", to: post_path(@conn, :index) %>
+<%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default btn-xs" %>
 
 <%= render "comments.html", post: @post %>
 
