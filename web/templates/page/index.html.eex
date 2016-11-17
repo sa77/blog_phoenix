@@ -1,8 +1,7 @@
 <div class="jumbotron">
-
   <h2><%= gettext "Welcome to blog engine powered by %{name}", name: "Phoenix!" %></h2>
   <br/>
   <%= link "Blog posts", to: post_path(@conn, :index), class: "btn btn-primary" %>
-
 </div>
 
+<%= link "Login", to: session_path(@conn, :new), class: "btn btn-primary pull-right" %>

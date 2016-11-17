@@ -21,6 +21,7 @@ defmodule BlogPhoenix.Router do
       post "/comment", PostController, :add_comment
     end
     resources "/users", UserController
+    resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
 
   # Other scopes may use custom stacks.
