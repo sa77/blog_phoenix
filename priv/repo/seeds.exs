@@ -9,3 +9,5 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+BlogPhoenix.Repo.insert!(%BlogPhoenix.User{}, %{ email: 'bruce1@wayne.com', username: 'bruce', password: 'batman', password_confirmation: 'batman' })

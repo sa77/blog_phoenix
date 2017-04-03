@@ -31,8 +31,9 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 	`$ heroku addons:create heroku-postgresql`
 
 - set environment variables/secret key
-	
-	`$ heroku config:set SECRET_KEY_BASE=[copied from config/prod.secret.exs]`
+
+		$ MIX_ENV=prod mix phoenix.gen.secret
+		$ heroku config:set SECRET_KEY_BASE=<key_generated_above>
 
 - push to heroku, create db(ignore the warnings) and migrate
 
